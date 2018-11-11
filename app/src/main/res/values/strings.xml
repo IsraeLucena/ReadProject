@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">WeRead</string>
+    <string name="app_name">News One</string>
+    <string name="mTlistaNoticias">Sources of News</string>
+    <string name="mTituloNotificacao">ss</string>
 </resources>

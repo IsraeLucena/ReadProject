@@ -1,5 +1,10 @@
 package com.example.israel.weread;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +23,8 @@ import io.paperdb.Paper;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static com.example.israel.weread.R.string.mTituloNotificacao;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -119,5 +126,22 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    // NOTIFICACAO AO ENTRAR NO PROGRAMA START NOTIFICACAO E AO CLICAR REDIRECIONAR PARA UMA DAS
+        // FONTE DE NOTICIAS COMO ABC NEWS
+       /* int id = (int) (Math.random()* 1000);
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(getBaseContext(), id,
+                null, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        Notification notification = new NotificationCompat.Builder(getBaseContext())
+                .setContentTitle("Bem vindo News ONE")
+                .setContentText("Novas Noticias no ABC News ...")
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentIntent(resultPendingIntent).build();
+        NotificationManager  mNotificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        mNot*/ificationManager.notify(id, notification);
+
     }
 }

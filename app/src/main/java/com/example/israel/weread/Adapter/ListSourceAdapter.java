@@ -75,6 +75,14 @@ public class ListSourceAdapter extends RecyclerView.Adapter<ListSourceViewHolder
     @Override
     public void onBindViewHolder(@NonNull final ListSourceViewHolder holder, int position) {
 
+       /* Picasso.with(context)
+                .load(articleList.get(position).getUrlToImage())
+                .into(holder.article_image);*/
+        /*if (webSite.getSources().get(position).getName().contains("ABC")) {
+            Picasso.with(context)
+                    .load(R.mipmap.article)
+                    .into(holder.source_image);
+        }*/
 
         holder.source_title.setText(webSite.getSources().get(position).getName());
         holder.setItemClickListener(new ItemClickListener() {
